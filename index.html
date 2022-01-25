@@ -2,6 +2,7 @@
 <head>
 <title>Abiral's Portfolio</title>
  <link rel="shortcut icon" type="image/png" sizes="57x57" href="img/namaste.png" > 
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
 <!-- Apply styles to html elements -->
 <style>
 *{
@@ -14,14 +15,19 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 nav{
-width: 100%; height: 15vh;
-background: black;
-display: flex; justify-content: space-between;
-align-items: center;
+width: 100%;
+    height: 9vh;
+    background: #a811e9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    display: flex;
 }
 nav .mainmenu{
 width: 40%;
 display: flex; justify-content: space-around;
+text-decoration-color: whitesmoke;
 }
 main{
 width: 100%; height: 85vh;
@@ -39,11 +45,19 @@ section div{
 animation:changeborder 10s infinite linear;
 border: 7px solid red;
 }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: aquamarine;
+}
 @keyframes changeborder{
 0%
 20%
 40%
 }
+
 </style>
 </head>
 <body>
@@ -51,12 +65,12 @@ border: 7px solid red;
 <!--Use header to indicate that manu will be a part of header -->
 <header>
 <nav>
-<div class = "logo" <h3 style="color:white;"><h3>My-Portfolio</h3></div>
+<div class = "logo" ><h3 style="color:white;"><h3>My-Portfolio</h3></div>
 <!--Lets define the menu items now-->
 <div class = "mainmenu">
-<a href="Home.html">Home</a>
-<a href="#">About Us</a>
-<a href="#">Contact Us</a>
+<a href="Home.html" class="btn btn-danger">Home</a>
+<a href="#" class="btn btn-danger">About Us</a>
+<a href="#" class="btn btn-light">Contact Us</a>
 </div>
 </nav>
 <!--Let us create the main section now, if you are not using html5, use div tags-->
@@ -67,9 +81,30 @@ border: 7px solid red;
 <!--make text italic-->
 <p><i></i></p><br>
 <!--create a button, if there is a form, you can specify an action on click-->
-<input type = button value = "view more">
+<button type="button" class="btn btn-outline-primary">Primary</button>
 </section>
 </main>
 </header>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="1.jpg" class="d-block w-100" alt="..." width="100px" height="130px">
+    </div>
+    <div class="carousel-item">
+      <img src="2.jpg" class="d-block w-100" alt="..." width="100px" height="130px">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 </body>
 </html>
+
